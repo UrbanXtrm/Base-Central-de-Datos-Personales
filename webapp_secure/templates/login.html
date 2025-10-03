@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h2>Acceso seguro</h2>
+<form method="post" action="/login">
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <button type="submit">Entrar</button>
+</form>
+{% if error %}<p style="color:red">{{error}}</p>{% endif %}
+</body>
+</html>

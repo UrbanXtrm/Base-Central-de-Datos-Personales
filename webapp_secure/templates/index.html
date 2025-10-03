@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel de datos</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Panel seguro</h1>
+<form method="post" action="/upload" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Subir documento</button>
+</form>
+<h2>Documentos almacenados:</h2>
+<ul>
+{% for f in files %}
+    <li><a href="/download/{{f[0]}}">{{f[1]}}</a></li>
+{% endfor %}
+</ul>
+<a href="/delete_all" style="color:red">Borrar todos los datos</a>
+<p><small>Uso personal. Cumple RGPD básico (descargar/borrar datos).</small></p>
+</body>
+</html>
