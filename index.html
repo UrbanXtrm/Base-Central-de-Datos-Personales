@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Parking Libre</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-sA+e2uoZ1CtdgMj5n2R6jVMu9zzTtmI1Y6LkZgP0h7E="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Buscador de aparcamientos libres</h1>
+      <p>Selecciona una ciudad para ver los parkings públicos y privados con plazas disponibles.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <label for="citySelect">Ciudad</label>
+        <select id="citySelect"></select>
+
+        <fieldset class="filters">
+          <legend>Tipo de parking</legend>
+          <label>
+            <input type="checkbox" id="filterPublic" checked />
+            Público
+          </label>
+          <label>
+            <input type="checkbox" id="filterPrivate" checked />
+            Privado
+          </label>
+        </fieldset>
+
+        <div class="summary" id="summary"></div>
+      </section>
+
+      <section id="map"></section>
+
+      <section class="parking-list" id="parkingList"></section>
+    </main>
+
+    <footer>
+      <small>
+        Datos ficticios con fines demostrativos. Mapa proporcionado por
+        <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a>
+        y <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a>.
+      </small>
+    </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-o9N1j7kGEXG6B5G2lY8U24mEY4vWwqcT9A+4JbPkz0A="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

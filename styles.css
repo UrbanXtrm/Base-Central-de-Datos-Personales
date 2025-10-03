@@ -1,0 +1,170 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --background: #f5f5f5;
+  --surface: #ffffff;
+  --primary: #2a77d4;
+  --primary-dark: #1f5fa8;
+  --text: #1e1e1e;
+  --text-muted: #555555;
+  --border: #dcdcdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 0 auto;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+.controls,
+.parking-list {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
+}
+
+.controls label,
+.controls select,
+.controls fieldset {
+  display: block;
+  width: 100%;
+}
+
+.controls label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.controls select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filters label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.summary {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+#map {
+  height: 480px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border);
+}
+
+.parking-list h2 {
+  margin-top: 0;
+}
+
+.parking-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.parking-card:last-child {
+  margin-bottom: 0;
+}
+
+.parking-card .meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge.public {
+  background: #2d9c5a;
+}
+
+.badge.private {
+  background: #d46c2a;
+}
+
+.badge.full {
+  background: #b0b0b0;
+}
+
+@media (max-width: 960px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    height: 360px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: inherit;
+}
