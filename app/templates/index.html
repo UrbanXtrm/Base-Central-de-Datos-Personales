@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base Centralizada de Datos Personales</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Base centralizada de datos personales</h1>
+      <p>
+        Esta herramienta permite centralizar datos personales, médicos y profesionales.
+        Selecciona una persona para ver su ficha integral o crea un nuevo registro.
+      </p>
+
+      <section>
+        <h2>Personas registradas</h2>
+        <ul id="person-list" class="person-list"></ul>
+        <form id="person-form">
+          <h3>Crear nueva persona</h3>
+          <div class="grid">
+            <label>Nombre<input name="first_name" required /></label>
+            <label>Apellidos<input name="last_name" required /></label>
+          </div>
+          <div class="grid">
+            <label>Email<input type="email" name="email" /></label>
+            <label>Teléfono<input name="phone" /></label>
+          </div>
+          <label>Dirección<textarea name="address"></textarea></label>
+          <button type="submit">Guardar</button>
+        </form>
+        <div id="person-feedback" class="feedback"></div>
+      </section>
+
+      <section id="profile">
+        <h2>Perfil completo</h2>
+        <p>Los datos completos aparecerán aquí al seleccionar o crear una persona.</p>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
