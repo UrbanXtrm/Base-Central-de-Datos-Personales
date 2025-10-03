@@ -1,0 +1,33 @@
+body {
+  background: #f6f8fb;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.feedback {
+  margin-top: 1rem;
+  color: var(--pico-primary);
+}
+
+.person-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.person-list li {
+  background: white;
+  border: 1px solid var(--pico-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.person-list li:hover {
+  background: var(--pico-primary);
+  color: white;
+}
